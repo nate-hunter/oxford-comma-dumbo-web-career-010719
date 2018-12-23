@@ -22,10 +22,10 @@ end
 =end 
 
 def oxford_comma(array)
-  if array.count > 2
+  if array.count == 2 
+    "#{array[0]} and #{array[1]}"
+  elsif array.count > 2
     array[-1].insert(0, "and ")
-  elsif array.count == 2 
-    array.join(" and ")
-   end
+  end
   array.join(", ")
 end 
