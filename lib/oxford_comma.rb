@@ -3,10 +3,11 @@
 #   new_array.insert(-1, "and")
 # end
 
+=begin
 def oxford_comma(array)
   #if array.count == 1 
     #array.join 
-  if array.size == 2 
+  if array.count == 2 
     array.join(" and ")
   elsif array.count > 2
     array[-1].insert(0, "and ")
@@ -16,5 +17,15 @@ def oxford_comma(array)
     #and_array = array.join(", ")
     #and_array.insert(-2, "and #{and_array[-1]}")
   end
+  array.join(", ")
+end 
+=end 
+
+def oxford_comma(array)
+  if array.count > 2
+    array[-1].insert(0, "and ")
+  elsif array.count == 2 
+    array.join(" and ")
+   end
   array.join(", ")
 end 
